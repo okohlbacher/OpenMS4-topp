@@ -1,3 +1,12 @@
+# TOPP after standalone tool extraction
+
+OpenNuXL, ProSE, NucleicAcidSearchEngine, CometAdapter, MascotAdapterOnline,
+DatabaseSuitability, ProteomicsLFQ and ParquetDiff now have separate source
+repositories and manifests. The remaining package owns 123 potential tools
+(122 when optional FeatureLinkerWNet is disabled), preserving executable names.
+Install the separate products beside TOPP for the complete historical suite.
+File-format support remains in the Core SDK. Numerical fixtures remain TestData.
+
 # OpenMSTOPP 1.0.0 experimental
 
 Independent source package: 130 command-line tools, plus FeatureLinkerWNet when enabled in the SDK. Requires the exact OpenMS core and OpenMSCLI commits in `dependencies.lock.json` installed in `CMAKE_PREFIX_PATH`. No parent source/build tree is used.
