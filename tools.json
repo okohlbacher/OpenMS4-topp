@@ -132,7 +132,8 @@
     },
     {
       "name": "FeatureLinkerWNet",
-      "category": "Feature Linking"
+      "category": "Feature Linking",
+      "requires_feature": "OpenMS_WITH_WNETALIGN"
     },
     {
       "name": "FileConverter",
