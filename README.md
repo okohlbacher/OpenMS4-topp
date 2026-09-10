@@ -1,15 +1,28 @@
 # OpenMSTOPP 1.0.0 experimental
 
-Independent source package: 131 command-line tools. Requires the exact OpenMS core and OpenMSCLI commits in `dependencies.lock.json` installed in `CMAKE_PREFIX_PATH`. No parent source/build tree is used.
+Independent source package: 130 command-line tools, plus FeatureLinkerWNet when enabled in the SDK. Requires the exact OpenMS core and OpenMSCLI commits in `dependencies.lock.json` installed in `CMAKE_PREFIX_PATH`. No parent source/build tree is used.
+
+First build and install the pinned Core SDK with `OPENMS_BUILD_TEST_SUPPORT=ON`,
+then build and install the pinned OpenMSCLI package against that SDK. TOPP links
+their imported `OpenMS::Core` and `OpenMS::CLI` targets; FuzzyDiff also links
+`OpenMS::TestFramework` from Core's TestSupport component. Use the same compiler,
+architecture and build configuration as those SDKs. For a Debug SDK installed at
+`/sdk/openms4`:
 
 ```sh
-cmake -S . -B build -DCMAKE_PREFIX_PATH=/sdk/openms4 -DCMAKE_INSTALL_PREFIX=/sdk/openms4
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/sdk/openms4 -DCMAKE_INSTALL_PREFIX=/sdk/openms4
 cmake --build build --parallel 4
 ctest --test-dir build --output-on-failure
 cmake --install build
 ```
 
-Set `OPENMS_TOOL_PREFIX_PATH` to installation prefixes to discover independently installed tools. Scientific algorithms, including FLASH and OpenSWATH algorithms, remain in core; this package owns their executable front ends. Product version is independent of the core version. All existing numerical fixtures and the original suite are preserved in OpenMS4-test-data. Adapters still require their documented external executables; those are not silently downloaded or bundled.
+Use a Core+CLI dependency prefix without an existing TOPP installation while
+running build-tree tests, and test before installing TOPP. The registry rejects
+duplicate tool names when it discovers both a build-tree TOPP registry and a
+separate installed TOPP registry beside CLI. Once installed, test the installed
+executables with the OpenMS4-test-data harness.
+
+Set `OPENMS_TOOL_PREFIX_PATH` to installation prefixes to discover independently installed tools. Scientific algorithms remain in core; this package owns the TOPP executable front ends. FLASH and OpenSWATH executable front ends belong to the separate OpenMS4-flash and OpenMS4-openswath packages. Product version is independent of the core version. All existing numerical fixtures and the original suite are preserved in OpenMS4-test-data. Adapters still require their documented external executables; those are not silently downloaded or bundled.
 
 ## Installation and source identity
 
