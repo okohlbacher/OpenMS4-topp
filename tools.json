@@ -31,10 +31,6 @@
       "category": "Targeted Experiments and OpenSWATH"
     },
     {
-      "name": "CometAdapter",
-      "category": "Identification of Proteins and Peptides (SearchEngines)"
-    },
-    {
       "name": "ConsensusID",
       "category": "Identification Processing"
     },
@@ -49,10 +45,6 @@
     {
       "name": "DatabaseFilter",
       "category": "File Filtering, Extraction and Merging"
-    },
-    {
-      "name": "DatabaseSuitability",
-      "category": "Quality Control"
     },
     {
       "name": "DeMeanderize",
@@ -288,10 +280,6 @@
       "category": "File Filtering, Extraction and Merging"
     },
     {
-      "name": "MascotAdapterOnline",
-      "category": "Identification of Proteins and Peptides (SearchEngines)"
-    },
-    {
       "name": "MassCalculator",
       "category": "Misc"
     },
@@ -336,20 +324,12 @@
       "category": "Identification of Proteins and Peptides (SearchEngines)"
     },
     {
-      "name": "NucleicAcidSearchEngine",
-      "category": "RNA"
-    },
-    {
       "name": "OpenMSDatabasesInfo",
       "category": "[for Developers]"
     },
     {
       "name": "OpenMSInfo",
       "category": "Misc"
-    },
-    {
-      "name": "OpenNuXL",
-      "category": "Cross-Linking"
     },
     {
       "name": "OpenPepXL",
@@ -362,10 +342,6 @@
     {
       "name": "ParquetConverter",
       "category": "File Converter"
-    },
-    {
-      "name": "ParquetDiff",
-      "category": "[for Developers]"
     },
     {
       "name": "PeakPickerHiRes",
@@ -392,19 +368,11 @@
       "category": "Identification Processing"
     },
     {
-      "name": "ProSE",
-      "category": "Identification of Proteins and Peptides (SearchEngines)"
-    },
-    {
       "name": "ProteinInference",
       "category": "Identification Processing"
     },
     {
       "name": "ProteinQuantifier",
-      "category": "Quantitation"
-    },
-    {
-      "name": "ProteomicsLFQ",
       "category": "Quantitation"
     },
     {
