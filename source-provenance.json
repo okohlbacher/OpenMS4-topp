@@ -1,0 +1,697 @@
+{
+  "upstream": "https://github.com/OpenMS/OpenMS",
+  "commit": "ca32296038839459d8c9b075b759e285913d6294",
+  "package": "topp",
+  "imported_files": [
+    {
+      "upstream": "src/tests/class_tests/openms/source/PercolatorAdapter_parity_test.cpp",
+      "package": "topp",
+      "path": "tests/PercolatorAdapter_parity_test.cpp"
+    },
+    {
+      "upstream": "src/topp/AccurateMassSearch.cpp",
+      "package": "topp",
+      "path": "src/AccurateMassSearch.cpp"
+    },
+    {
+      "upstream": "src/topp/AssayGeneratorMetabo.cpp",
+      "package": "topp",
+      "path": "src/AssayGeneratorMetabo.cpp"
+    },
+    {
+      "upstream": "src/topp/AssayGeneratorMetaboSirius.cpp",
+      "package": "topp",
+      "path": "src/AssayGeneratorMetaboSirius.cpp"
+    },
+    {
+      "upstream": "src/topp/BaselineFilter.cpp",
+      "package": "topp",
+      "path": "src/BaselineFilter.cpp"
+    },
+    {
+      "upstream": "src/topp/CMakeLists.txt",
+      "package": "topp",
+      "path": "src/CMakeLists.txt"
+    },
+    {
+      "upstream": "src/topp/CVInspector.cpp",
+      "package": "topp",
+      "path": "src/CVInspector.cpp"
+    },
+    {
+      "upstream": "src/topp/ClusterMassTraces.cpp",
+      "package": "topp",
+      "path": "src/ClusterMassTraces.cpp"
+    },
+    {
+      "upstream": "src/topp/ClusterMassTracesByPrecursor.cpp",
+      "package": "topp",
+      "path": "src/ClusterMassTracesByPrecursor.cpp"
+    },
+    {
+      "upstream": "src/topp/CometAdapter.cpp",
+      "package": "topp",
+      "path": "src/CometAdapter.cpp"
+    },
+    {
+      "upstream": "src/topp/ConsensusID.cpp",
+      "package": "topp",
+      "path": "src/ConsensusID.cpp"
+    },
+    {
+      "upstream": "src/topp/ConsensusMapNormalizer.cpp",
+      "package": "topp",
+      "path": "src/ConsensusMapNormalizer.cpp"
+    },
+    {
+      "upstream": "src/topp/DTAExtractor.cpp",
+      "package": "topp",
+      "path": "src/DTAExtractor.cpp"
+    },
+    {
+      "upstream": "src/topp/DatabaseFilter.cpp",
+      "package": "topp",
+      "path": "src/DatabaseFilter.cpp"
+    },
+    {
+      "upstream": "src/topp/DatabaseSuitability.cpp",
+      "package": "topp",
+      "path": "src/DatabaseSuitability.cpp"
+    },
+    {
+      "upstream": "src/topp/DeMeanderize.cpp",
+      "package": "topp",
+      "path": "src/DeMeanderize.cpp"
+    },
+    {
+      "upstream": "src/topp/Decharger.cpp",
+      "package": "topp",
+      "path": "src/Decharger.cpp"
+    },
+    {
+      "upstream": "src/topp/DecoyDatabase.cpp",
+      "package": "topp",
+      "path": "src/DecoyDatabase.cpp"
+    },
+    {
+      "upstream": "src/topp/Digestor.cpp",
+      "package": "topp",
+      "path": "src/Digestor.cpp"
+    },
+    {
+      "upstream": "src/topp/DigestorMotif.cpp",
+      "package": "topp",
+      "path": "src/DigestorMotif.cpp"
+    },
+    {
+      "upstream": "src/topp/EICExtractor.cpp",
+      "package": "topp",
+      "path": "src/EICExtractor.cpp"
+    },
+    {
+      "upstream": "src/topp/Epifany.cpp",
+      "package": "topp",
+      "path": "src/Epifany.cpp"
+    },
+    {
+      "upstream": "src/topp/ExternalCalibration.cpp",
+      "package": "topp",
+      "path": "src/ExternalCalibration.cpp"
+    },
+    {
+      "upstream": "src/topp/FalseDiscoveryRate.cpp",
+      "package": "topp",
+      "path": "src/FalseDiscoveryRate.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureFinderCentroided.cpp",
+      "package": "topp",
+      "path": "src/FeatureFinderCentroided.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureFinderIdentification.cpp",
+      "package": "topp",
+      "path": "src/FeatureFinderIdentification.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureFinderLFQ.cpp",
+      "package": "topp",
+      "path": "src/FeatureFinderLFQ.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureFinderMetabo.cpp",
+      "package": "topp",
+      "path": "src/FeatureFinderMetabo.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureFinderMetaboIdent.cpp",
+      "package": "topp",
+      "path": "src/FeatureFinderMetaboIdent.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureFinderMultiplex.cpp",
+      "package": "topp",
+      "path": "src/FeatureFinderMultiplex.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureLinkerBase.cpp",
+      "package": "topp",
+      "path": "src/FeatureLinkerBase.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureLinkerLabeled.cpp",
+      "package": "topp",
+      "path": "src/FeatureLinkerLabeled.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureLinkerUnlabeled.cpp",
+      "package": "topp",
+      "path": "src/FeatureLinkerUnlabeled.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureLinkerUnlabeledKD.cpp",
+      "package": "topp",
+      "path": "src/FeatureLinkerUnlabeledKD.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureLinkerUnlabeledQT.cpp",
+      "package": "topp",
+      "path": "src/FeatureLinkerUnlabeledQT.cpp"
+    },
+    {
+      "upstream": "src/topp/FeatureLinkerWNet.cpp",
+      "package": "topp",
+      "path": "src/FeatureLinkerWNet.cpp"
+    },
+    {
+      "upstream": "src/topp/FileConverter.cpp",
+      "package": "topp",
+      "path": "src/FileConverter.cpp"
+    },
+    {
+      "upstream": "src/topp/FileFilter.cpp",
+      "package": "topp",
+      "path": "src/FileFilter.cpp"
+    },
+    {
+      "upstream": "src/topp/FileInfo.cpp",
+      "package": "topp",
+      "path": "src/FileInfo.cpp"
+    },
+    {
+      "upstream": "src/topp/FileMerger.cpp",
+      "package": "topp",
+      "path": "src/FileMerger.cpp"
+    },
+    {
+      "upstream": "src/topp/FuzzyDiff.cpp",
+      "package": "topp",
+      "path": "src/FuzzyDiff.cpp"
+    },
+    {
+      "upstream": "src/topp/GNPSExport.cpp",
+      "package": "topp",
+      "path": "src/GNPSExport.cpp"
+    },
+    {
+      "upstream": "src/topp/HighResPrecursorMassCorrector.cpp",
+      "package": "topp",
+      "path": "src/HighResPrecursorMassCorrector.cpp"
+    },
+    {
+      "upstream": "src/topp/IDConflictResolver.cpp",
+      "package": "topp",
+      "path": "src/IDConflictResolver.cpp"
+    },
+    {
+      "upstream": "src/topp/IDDecoyProbability.cpp",
+      "package": "topp",
+      "path": "src/IDDecoyProbability.cpp"
+    },
+    {
+      "upstream": "src/topp/IDExtractor.cpp",
+      "package": "topp",
+      "path": "src/IDExtractor.cpp"
+    },
+    {
+      "upstream": "src/topp/IDFileConverter.cpp",
+      "package": "topp",
+      "path": "src/IDFileConverter.cpp"
+    },
+    {
+      "upstream": "src/topp/IDFilter.cpp",
+      "package": "topp",
+      "path": "src/IDFilter.cpp"
+    },
+    {
+      "upstream": "src/topp/IDMapper.cpp",
+      "package": "topp",
+      "path": "src/IDMapper.cpp"
+    },
+    {
+      "upstream": "src/topp/IDMerger.cpp",
+      "package": "topp",
+      "path": "src/IDMerger.cpp"
+    },
+    {
+      "upstream": "src/topp/IDPosteriorErrorProbability.cpp",
+      "package": "topp",
+      "path": "src/IDPosteriorErrorProbability.cpp"
+    },
+    {
+      "upstream": "src/topp/IDRTCalibration.cpp",
+      "package": "topp",
+      "path": "src/IDRTCalibration.cpp"
+    },
+    {
+      "upstream": "src/topp/IDRipper.cpp",
+      "package": "topp",
+      "path": "src/IDRipper.cpp"
+    },
+    {
+      "upstream": "src/topp/IDScoreSwitcher.cpp",
+      "package": "topp",
+      "path": "src/IDScoreSwitcher.cpp"
+    },
+    {
+      "upstream": "src/topp/IDSplitter.cpp",
+      "package": "topp",
+      "path": "src/IDSplitter.cpp"
+    },
+    {
+      "upstream": "src/topp/INIUpdater.cpp",
+      "package": "topp",
+      "path": "src/INIUpdater.cpp"
+    },
+    {
+      "upstream": "src/topp/InternalCalibration.cpp",
+      "package": "topp",
+      "path": "src/InternalCalibration.cpp"
+    },
+    {
+      "upstream": "src/topp/IonMobilityBinning.cpp",
+      "package": "topp",
+      "path": "src/IonMobilityBinning.cpp"
+    },
+    {
+      "upstream": "src/topp/IsobaricAnalyzer.cpp",
+      "package": "topp",
+      "path": "src/IsobaricAnalyzer.cpp"
+    },
+    {
+      "upstream": "src/topp/IsobaricWorkflow.cpp",
+      "package": "topp",
+      "path": "src/IsobaricWorkflow.cpp"
+    },
+    {
+      "upstream": "src/topp/JSONExporter.cpp",
+      "package": "topp",
+      "path": "src/JSONExporter.cpp"
+    },
+    {
+      "upstream": "src/topp/LuciphorAdapter.cpp",
+      "package": "topp",
+      "path": "src/LuciphorAdapter.cpp"
+    },
+    {
+      "upstream": "src/topp/MRMMapper.cpp",
+      "package": "topp",
+      "path": "src/MRMMapper.cpp"
+    },
+    {
+      "upstream": "src/topp/MRMPairFinder.cpp",
+      "package": "topp",
+      "path": "src/MRMPairFinder.cpp"
+    },
+    {
+      "upstream": "src/topp/MSFraggerAdapter.cpp",
+      "package": "topp",
+      "path": "src/MSFraggerAdapter.cpp"
+    },
+    {
+      "upstream": "src/topp/MSGFPlusAdapter.cpp",
+      "package": "topp",
+      "path": "src/MSGFPlusAdapter.cpp"
+    },
+    {
+      "upstream": "src/topp/MSstatsConverter.cpp",
+      "package": "topp",
+      "path": "src/MSstatsConverter.cpp"
+    },
+    {
+      "upstream": "src/topp/MaRaClusterAdapter.cpp",
+      "package": "topp",
+      "path": "src/MaRaClusterAdapter.cpp"
+    },
+    {
+      "upstream": "src/topp/MapAlignerIdentification.cpp",
+      "package": "topp",
+      "path": "src/MapAlignerIdentification.cpp"
+    },
+    {
+      "upstream": "src/topp/MapAlignerPoseClustering.cpp",
+      "package": "topp",
+      "path": "src/MapAlignerPoseClustering.cpp"
+    },
+    {
+      "upstream": "src/topp/MapAlignerTreeGuided.cpp",
+      "package": "topp",
+      "path": "src/MapAlignerTreeGuided.cpp"
+    },
+    {
+      "upstream": "src/topp/MapNormalizer.cpp",
+      "package": "topp",
+      "path": "src/MapNormalizer.cpp"
+    },
+    {
+      "upstream": "src/topp/MapRTTransformer.cpp",
+      "package": "topp",
+      "path": "src/MapRTTransformer.cpp"
+    },
+    {
+      "upstream": "src/topp/MapStatistics.cpp",
+      "package": "topp",
+      "path": "src/MapStatistics.cpp"
+    },
+    {
+      "upstream": "src/topp/MascotAdapterOnline.cpp",
+      "package": "topp",
+      "path": "src/MascotAdapterOnline.cpp"
+    },
+    {
+      "upstream": "src/topp/MassCalculator.cpp",
+      "package": "topp",
+      "path": "src/MassCalculator.cpp"
+    },
+    {
+      "upstream": "src/topp/MassTraceExtractor.cpp",
+      "package": "topp",
+      "path": "src/MassTraceExtractor.cpp"
+    },
+    {
+      "upstream": "src/topp/MetaProSIP.cpp",
+      "package": "topp",
+      "path": "src/MetaProSIP.cpp"
+    },
+    {
+      "upstream": "src/topp/MetaboliteAdductDecharger.cpp",
+      "package": "topp",
+      "path": "src/MetaboliteAdductDecharger.cpp"
+    },
+    {
+      "upstream": "src/topp/MetaboliteSpectralMatcher.cpp",
+      "package": "topp",
+      "path": "src/MetaboliteSpectralMatcher.cpp"
+    },
+    {
+      "upstream": "src/topp/MultiplexResolver.cpp",
+      "package": "topp",
+      "path": "src/MultiplexResolver.cpp"
+    },
+    {
+      "upstream": "src/topp/MzMLSplitter.cpp",
+      "package": "topp",
+      "path": "src/MzMLSplitter.cpp"
+    },
+    {
+      "upstream": "src/topp/MzTabExporter.cpp",
+      "package": "topp",
+      "path": "src/MzTabExporter.cpp"
+    },
+    {
+      "upstream": "src/topp/NoiseFilterGaussian.cpp",
+      "package": "topp",
+      "path": "src/NoiseFilterGaussian.cpp"
+    },
+    {
+      "upstream": "src/topp/NoiseFilterSGolay.cpp",
+      "package": "topp",
+      "path": "src/NoiseFilterSGolay.cpp"
+    },
+    {
+      "upstream": "src/topp/NovorAdapter.cpp",
+      "package": "topp",
+      "path": "src/NovorAdapter.cpp"
+    },
+    {
+      "upstream": "src/topp/NucleicAcidSearchEngine.cpp",
+      "package": "topp",
+      "path": "src/NucleicAcidSearchEngine.cpp"
+    },
+    {
+      "upstream": "src/topp/OpenMSDatabasesInfo.cpp",
+      "package": "topp",
+      "path": "src/OpenMSDatabasesInfo.cpp"
+    },
+    {
+      "upstream": "src/topp/OpenMSInfo.cpp",
+      "package": "topp",
+      "path": "src/OpenMSInfo.cpp"
+    },
+    {
+      "upstream": "src/topp/OpenNuXL.cpp",
+      "package": "topp",
+      "path": "src/OpenNuXL.cpp"
+    },
+    {
+      "upstream": "src/topp/OpenPepXL.cpp",
+      "package": "topp",
+      "path": "src/OpenPepXL.cpp"
+    },
+    {
+      "upstream": "src/topp/PSMFeatureExtractor.cpp",
+      "package": "topp",
+      "path": "src/PSMFeatureExtractor.cpp"
+    },
+    {
+      "upstream": "src/topp/ParquetConverter.cpp",
+      "package": "topp",
+      "path": "src/ParquetConverter.cpp"
+    },
+    {
+      "upstream": "src/topp/ParquetDiff.cpp",
+      "package": "topp",
+      "path": "src/ParquetDiff.cpp"
+    },
+    {
+      "upstream": "src/topp/PeakPickerHiRes.cpp",
+      "package": "topp",
+      "path": "src/PeakPickerHiRes.cpp"
+    },
+    {
+      "upstream": "src/topp/PeakPickerIM.cpp",
+      "package": "topp",
+      "path": "src/PeakPickerIM.cpp"
+    },
+    {
+      "upstream": "src/topp/PeakPickerIterative.cpp",
+      "package": "topp",
+      "path": "src/PeakPickerIterative.cpp"
+    },
+    {
+      "upstream": "src/topp/PeptideIndexer.cpp",
+      "package": "topp",
+      "path": "src/PeptideIndexer.cpp"
+    },
+    {
+      "upstream": "src/topp/PercolatorAdapter.cpp",
+      "package": "topp",
+      "path": "src/PercolatorAdapter.cpp"
+    },
+    {
+      "upstream": "src/topp/PhosphoScoring.cpp",
+      "package": "topp",
+      "path": "src/PhosphoScoring.cpp"
+    },
+    {
+      "upstream": "src/topp/ProSE.cpp",
+      "package": "topp",
+      "path": "src/ProSE.cpp"
+    },
+    {
+      "upstream": "src/topp/ProteinInference.cpp",
+      "package": "topp",
+      "path": "src/ProteinInference.cpp"
+    },
+    {
+      "upstream": "src/topp/ProteinQuantifier.cpp",
+      "package": "topp",
+      "path": "src/ProteinQuantifier.cpp"
+    },
+    {
+      "upstream": "src/topp/ProteomicsLFQ.cpp",
+      "package": "topp",
+      "path": "src/ProteomicsLFQ.cpp"
+    },
+    {
+      "upstream": "src/topp/QCCalculator.cpp",
+      "package": "topp",
+      "path": "src/QCCalculator.cpp"
+    },
+    {
+      "upstream": "src/topp/QCEmbedder.cpp",
+      "package": "topp",
+      "path": "src/QCEmbedder.cpp"
+    },
+    {
+      "upstream": "src/topp/QCExporter.cpp",
+      "package": "topp",
+      "path": "src/QCExporter.cpp"
+    },
+    {
+      "upstream": "src/topp/QCExtractor.cpp",
+      "package": "topp",
+      "path": "src/QCExtractor.cpp"
+    },
+    {
+      "upstream": "src/topp/QCImporter.cpp",
+      "package": "topp",
+      "path": "src/QCImporter.cpp"
+    },
+    {
+      "upstream": "src/topp/QCMerger.cpp",
+      "package": "topp",
+      "path": "src/QCMerger.cpp"
+    },
+    {
+      "upstream": "src/topp/QCShrinker.cpp",
+      "package": "topp",
+      "path": "src/QCShrinker.cpp"
+    },
+    {
+      "upstream": "src/topp/QualityControl.cpp",
+      "package": "topp",
+      "path": "src/QualityControl.cpp"
+    },
+    {
+      "upstream": "src/topp/RNADigestor.cpp",
+      "package": "topp",
+      "path": "src/RNADigestor.cpp"
+    },
+    {
+      "upstream": "src/topp/RNAMassCalculator.cpp",
+      "package": "topp",
+      "path": "src/RNAMassCalculator.cpp"
+    },
+    {
+      "upstream": "src/topp/RNPxlXICFilter.cpp",
+      "package": "topp",
+      "path": "src/RNPxlXICFilter.cpp"
+    },
+    {
+      "upstream": "src/topp/Resampler.cpp",
+      "package": "topp",
+      "path": "src/Resampler.cpp"
+    },
+    {
+      "upstream": "src/topp/SageAdapter.cpp",
+      "package": "topp",
+      "path": "src/SageAdapter.cpp"
+    },
+    {
+      "upstream": "src/topp/SeedListGenerator.cpp",
+      "package": "topp",
+      "path": "src/SeedListGenerator.cpp"
+    },
+    {
+      "upstream": "src/topp/SemanticValidator.cpp",
+      "package": "topp",
+      "path": "src/SemanticValidator.cpp"
+    },
+    {
+      "upstream": "src/topp/SequenceCoverageCalculator.cpp",
+      "package": "topp",
+      "path": "src/SequenceCoverageCalculator.cpp"
+    },
+    {
+      "upstream": "src/topp/SimpleSearchEngine.cpp",
+      "package": "topp",
+      "path": "src/SimpleSearchEngine.cpp"
+    },
+    {
+      "upstream": "src/topp/SiriusExport.cpp",
+      "package": "topp",
+      "path": "src/SiriusExport.cpp"
+    },
+    {
+      "upstream": "src/topp/SpectraFilterNLargest.cpp",
+      "package": "topp",
+      "path": "src/SpectraFilterNLargest.cpp"
+    },
+    {
+      "upstream": "src/topp/SpectraFilterNormalizer.cpp",
+      "package": "topp",
+      "path": "src/SpectraFilterNormalizer.cpp"
+    },
+    {
+      "upstream": "src/topp/SpectraFilterThresholdMower.cpp",
+      "package": "topp",
+      "path": "src/SpectraFilterThresholdMower.cpp"
+    },
+    {
+      "upstream": "src/topp/SpectraFilterWindowMower.cpp",
+      "package": "topp",
+      "path": "src/SpectraFilterWindowMower.cpp"
+    },
+    {
+      "upstream": "src/topp/SpectraMerger.cpp",
+      "package": "topp",
+      "path": "src/SpectraMerger.cpp"
+    },
+    {
+      "upstream": "src/topp/SpectraSTSearchAdapter.cpp",
+      "package": "topp",
+      "path": "src/SpectraSTSearchAdapter.cpp"
+    },
+    {
+      "upstream": "src/topp/StaticModification.cpp",
+      "package": "topp",
+      "path": "src/StaticModification.cpp"
+    },
+    {
+      "upstream": "src/topp/TICCalculator.cpp",
+      "package": "topp",
+      "path": "src/TICCalculator.cpp"
+    },
+    {
+      "upstream": "src/topp/TextExporter.cpp",
+      "package": "topp",
+      "path": "src/TextExporter.cpp"
+    },
+    {
+      "upstream": "src/topp/UniPEFF.cpp",
+      "package": "topp",
+      "path": "src/UniPEFF.cpp"
+    },
+    {
+      "upstream": "src/topp/XFDR.cpp",
+      "package": "topp",
+      "path": "src/XFDR.cpp"
+    },
+    {
+      "upstream": "src/topp/XMLValidator.cpp",
+      "package": "topp",
+      "path": "src/XMLValidator.cpp"
+    },
+    {
+      "upstream": "src/topp/executables.cmake",
+      "package": "topp",
+      "path": "src/executables.cmake"
+    },
+    {
+      "upstream": "License.txt",
+      "package": "topp",
+      "path": "License.txt"
+    },
+    {
+      "upstream": "AUTHORS",
+      "package": "topp",
+      "path": "AUTHORS"
+    },
+    {
+      "upstream": ".clang-format",
+      "package": "topp",
+      "path": ".clang-format"
+    }
+  ]
+}

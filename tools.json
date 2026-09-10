@@ -1,0 +1,530 @@
+{
+  "package": "OpenMSTOPP",
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "AccurateMassSearch",
+      "category": "Metabolite Identification"
+    },
+    {
+      "name": "AssayGeneratorMetabo",
+      "category": "Targeted Experiments and OpenSWATH"
+    },
+    {
+      "name": "AssayGeneratorMetaboSirius",
+      "category": "Targeted Experiments and OpenSWATH"
+    },
+    {
+      "name": "BaselineFilter",
+      "category": "Spectrum Processing: Peak Smoothing and Normalization"
+    },
+    {
+      "name": "CVInspector",
+      "category": "[for Developers]"
+    },
+    {
+      "name": "ClusterMassTraces",
+      "category": "Misc"
+    },
+    {
+      "name": "ClusterMassTracesByPrecursor",
+      "category": "Targeted Experiments and OpenSWATH"
+    },
+    {
+      "name": "CometAdapter",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "ConsensusID",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "ConsensusMapNormalizer",
+      "category": "Quantitation"
+    },
+    {
+      "name": "DTAExtractor",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "DatabaseFilter",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "DatabaseSuitability",
+      "category": "Quality Control"
+    },
+    {
+      "name": "DeMeanderize",
+      "category": "Misc"
+    },
+    {
+      "name": "Decharger",
+      "category": "Quantitation"
+    },
+    {
+      "name": "DecoyDatabase",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "Digestor",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "DigestorMotif",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "EICExtractor",
+      "category": "Quantitation"
+    },
+    {
+      "name": "Epifany",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "ExternalCalibration",
+      "category": "Mass Correction and Calibration"
+    },
+    {
+      "name": "FalseDiscoveryRate",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "FeatureFinderCentroided",
+      "category": "Quantitation"
+    },
+    {
+      "name": "FeatureFinderIdentification",
+      "category": "Quantitation"
+    },
+    {
+      "name": "FeatureFinderLFQ",
+      "category": "Quantitation"
+    },
+    {
+      "name": "FeatureFinderMetabo",
+      "category": "Quantitation"
+    },
+    {
+      "name": "FeatureFinderMetaboIdent",
+      "category": "Quantitation"
+    },
+    {
+      "name": "FeatureFinderMultiplex",
+      "category": "Quantitation"
+    },
+    {
+      "name": "FeatureLinkerLabeled",
+      "category": "Feature Linking"
+    },
+    {
+      "name": "FeatureLinkerUnlabeled",
+      "category": "Feature Linking"
+    },
+    {
+      "name": "FeatureLinkerUnlabeledKD",
+      "category": "Feature Linking"
+    },
+    {
+      "name": "FeatureLinkerUnlabeledQT",
+      "category": "Feature Linking"
+    },
+    {
+      "name": "FeatureLinkerWNet",
+      "category": "Feature Linking"
+    },
+    {
+      "name": "FileConverter",
+      "category": "File Converter"
+    },
+    {
+      "name": "FileFilter",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "FileInfo",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "FileMerger",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "FuzzyDiff",
+      "category": "[for Developers]"
+    },
+    {
+      "name": "GNPSExport",
+      "category": "File Converter"
+    },
+    {
+      "name": "HighResPrecursorMassCorrector",
+      "category": "Mass Correction and Calibration"
+    },
+    {
+      "name": "IDConflictResolver",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "IDDecoyProbability",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "IDExtractor",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "IDFileConverter",
+      "category": "File Converter"
+    },
+    {
+      "name": "IDFilter",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "IDMapper",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "IDMerger",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "IDPosteriorErrorProbability",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "IDRTCalibration",
+      "category": "Mass Correction and Calibration"
+    },
+    {
+      "name": "IDRipper",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "IDScoreSwitcher",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "IDSplitter",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "INIUpdater",
+      "category": "Misc"
+    },
+    {
+      "name": "InternalCalibration",
+      "category": "Mass Correction and Calibration"
+    },
+    {
+      "name": "IonMobilityBinning",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "IsobaricAnalyzer",
+      "category": "Quantitation"
+    },
+    {
+      "name": "IsobaricWorkflow",
+      "category": "Quantitation"
+    },
+    {
+      "name": "JSONExporter",
+      "category": "[for Developers]"
+    },
+    {
+      "name": "LuciphorAdapter",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "MRMMapper",
+      "category": "Targeted Experiments and OpenSWATH"
+    },
+    {
+      "name": "MRMPairFinder",
+      "category": "Targeted Experiments and OpenSWATH"
+    },
+    {
+      "name": "MSFraggerAdapter",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "MSGFPlusAdapter",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "MSstatsConverter",
+      "category": "File Converter"
+    },
+    {
+      "name": "MaRaClusterAdapter",
+      "category": "Spectrum processing: Misc"
+    },
+    {
+      "name": "MapAlignerIdentification",
+      "category": "Map Alignment"
+    },
+    {
+      "name": "MapAlignerPoseClustering",
+      "category": "Map Alignment"
+    },
+    {
+      "name": "MapAlignerTreeGuided",
+      "category": "Map Alignment"
+    },
+    {
+      "name": "MapNormalizer",
+      "category": "Spectrum Processing: Peak Smoothing and Normalization"
+    },
+    {
+      "name": "MapRTTransformer",
+      "category": "Map Alignment"
+    },
+    {
+      "name": "MapStatistics",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "MascotAdapterOnline",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "MassCalculator",
+      "category": "Misc"
+    },
+    {
+      "name": "MassTraceExtractor",
+      "category": "Quantitation"
+    },
+    {
+      "name": "MetaProSIP",
+      "category": "Quantitation"
+    },
+    {
+      "name": "MetaboliteAdductDecharger",
+      "category": "Quantitation"
+    },
+    {
+      "name": "MetaboliteSpectralMatcher",
+      "category": "Metabolite Identification"
+    },
+    {
+      "name": "MultiplexResolver",
+      "category": "Quantitation"
+    },
+    {
+      "name": "MzMLSplitter",
+      "category": "File Filtering, Extraction and Merging"
+    },
+    {
+      "name": "MzTabExporter",
+      "category": "File Converter"
+    },
+    {
+      "name": "NoiseFilterGaussian",
+      "category": "Spectrum Processing: Peak Smoothing and Normalization"
+    },
+    {
+      "name": "NoiseFilterSGolay",
+      "category": "Spectrum Processing: Peak Smoothing and Normalization"
+    },
+    {
+      "name": "NovorAdapter",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "NucleicAcidSearchEngine",
+      "category": "RNA"
+    },
+    {
+      "name": "OpenMSDatabasesInfo",
+      "category": "[for Developers]"
+    },
+    {
+      "name": "OpenMSInfo",
+      "category": "Misc"
+    },
+    {
+      "name": "OpenNuXL",
+      "category": "Cross-Linking"
+    },
+    {
+      "name": "OpenPepXL",
+      "category": "Cross-Linking"
+    },
+    {
+      "name": "PSMFeatureExtractor",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "ParquetConverter",
+      "category": "File Converter"
+    },
+    {
+      "name": "ParquetDiff",
+      "category": "[for Developers]"
+    },
+    {
+      "name": "PeakPickerHiRes",
+      "category": "Spectrum processing: Centroiding"
+    },
+    {
+      "name": "PeakPickerIM",
+      "category": "Spectrum processing: Centroiding"
+    },
+    {
+      "name": "PeakPickerIterative",
+      "category": "Spectrum processing: Centroiding"
+    },
+    {
+      "name": "PeptideIndexer",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "PercolatorAdapter",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "PhosphoScoring",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "ProSE",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "ProteinInference",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "ProteinQuantifier",
+      "category": "Quantitation"
+    },
+    {
+      "name": "ProteomicsLFQ",
+      "category": "Quantitation"
+    },
+    {
+      "name": "QCCalculator",
+      "category": "Quality Control"
+    },
+    {
+      "name": "QCEmbedder",
+      "category": "Quality Control"
+    },
+    {
+      "name": "QCExporter",
+      "category": "Quality Control"
+    },
+    {
+      "name": "QCExtractor",
+      "category": "Quality Control"
+    },
+    {
+      "name": "QCImporter",
+      "category": "Quality Control"
+    },
+    {
+      "name": "QCMerger",
+      "category": "Quality Control"
+    },
+    {
+      "name": "QCShrinker",
+      "category": "Quality Control"
+    },
+    {
+      "name": "QualityControl",
+      "category": "Quality Control"
+    },
+    {
+      "name": "RNADigestor",
+      "category": "RNA"
+    },
+    {
+      "name": "RNAMassCalculator",
+      "category": "RNA"
+    },
+    {
+      "name": "RNPxlXICFilter",
+      "category": "Cross-Linking"
+    },
+    {
+      "name": "Resampler",
+      "category": "Spectrum processing: Misc"
+    },
+    {
+      "name": "SageAdapter",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "SeedListGenerator",
+      "category": "Quantitation"
+    },
+    {
+      "name": "SemanticValidator",
+      "category": "[for Developers]"
+    },
+    {
+      "name": "SequenceCoverageCalculator",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "SimpleSearchEngine",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "SiriusExport",
+      "category": "Metabolite Identification"
+    },
+    {
+      "name": "SpectraFilterNLargest",
+      "category": "Spectrum Processing: Peak Smoothing and Normalization"
+    },
+    {
+      "name": "SpectraFilterNormalizer",
+      "category": "Spectrum Processing: Peak Smoothing and Normalization"
+    },
+    {
+      "name": "SpectraFilterThresholdMower",
+      "category": "Spectrum Processing: Peak Smoothing and Normalization"
+    },
+    {
+      "name": "SpectraFilterWindowMower",
+      "category": "Spectrum Processing: Peak Smoothing and Normalization"
+    },
+    {
+      "name": "SpectraMerger",
+      "category": "Spectrum processing: Misc"
+    },
+    {
+      "name": "SpectraSTSearchAdapter",
+      "category": "Identification of Proteins and Peptides (SearchEngines)"
+    },
+    {
+      "name": "StaticModification",
+      "category": "Identification Processing"
+    },
+    {
+      "name": "TICCalculator",
+      "category": "Misc"
+    },
+    {
+      "name": "TextExporter",
+      "category": "File Converter"
+    },
+    {
+      "name": "UniPEFF",
+      "category": "File Converter"
+    },
+    {
+      "name": "XFDR",
+      "category": "Cross-Linking"
+    },
+    {
+      "name": "XMLValidator",
+      "category": "[for Developers]"
+    }
+  ]
+}
