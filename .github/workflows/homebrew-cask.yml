@@ -2,8 +2,10 @@ name: Homebrew cask
 
 on:
   push:
+    branches: ['**']
     paths:
       - 'Casks/**'
+      - '.github/workflows/homebrew-cask.yml'
   workflow_dispatch:
 
 permissions:
@@ -32,6 +34,7 @@ jobs:
       - name: Install and run the released cask
         run: |
           brew tap okohlbacher/openms4-core https://github.com/okohlbacher/OpenMS4-core
+          brew trust --formula okohlbacher/openms4-core/openms4-core
           brew tap okohlbacher/openms4-topp https://github.com/okohlbacher/OpenMS4-topp
           brew install --cask okohlbacher/openms4-topp/openms4-topp
           OpenMSInfo --help

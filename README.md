@@ -74,6 +74,8 @@ On macOS, install the tested tools and their Core formula dependency from the
 repository tap:
 
 ```sh
+brew tap okohlbacher/openms4-core https://github.com/okohlbacher/OpenMS4-core
+brew trust --formula okohlbacher/openms4-core/openms4-core
 brew tap okohlbacher/openms4-topp https://github.com/okohlbacher/OpenMS4-topp
 brew install --cask okohlbacher/openms4-topp/openms4-topp
 ```
