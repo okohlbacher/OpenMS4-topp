@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a relocatable TOPP cask payload against Homebrew Core and dependencies."""
+"""Build a TOPP cask payload against the Homebrew Core formula."""
 
 import argparse
 import os
@@ -33,10 +33,10 @@ def main() -> None:
                         "libsvm", "libxml2", "libzip", "xerces-c"]
     dependency_prefixes = [command("brew", "--prefix", name) for name in dependency_names]
     cli_build, topp_build, payload = work / "cli-build", work / "topp-build", work / "payload"
-    shutil.copytree(core, payload, symlinks=True)
+    payload.mkdir()
     env = os.environ.copy()
     env["DYLD_FALLBACK_LIBRARY_PATH"] = os.pathsep.join(
-        [str(payload / "lib"), str(brew / "lib")])
+        [str(payload / "lib"), str(core / "lib"), str(brew / "lib")])
     prefix_path = ";".join([str(core), *dependency_prefixes, str(brew)])
 
     def run(args_list: list[str]) -> None:
@@ -60,6 +60,10 @@ def main() -> None:
     run(["cmake", "--install", str(topp_build)])
     env["OPENMS_TOOL_PREFIX_PATH"] = str(payload)
     run([str(payload / "bin" / "OpenMSInfo"), "--help"])
+    clean_env = env.copy()
+    clean_env.pop("DYLD_FALLBACK_LIBRARY_PATH")
+    subprocess.run([str(payload / "bin" / "OpenMSInfo"), "--help"],
+                   check=True, env=clean_env)
     revision = command("git", "-C", str(source), "rev-parse", "HEAD")
     shutil.copyfile(source / "dependencies.lock.json", payload / "dependencies.lock.json")
     (payload / "source-revision.txt").write_text(revision + "\n", encoding="utf-8")

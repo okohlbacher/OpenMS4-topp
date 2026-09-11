@@ -31,6 +31,7 @@ jobs:
           gh run download "$run_id" --pattern 'topp-*' --pattern 'cask-*' --dir artifacts
           test "$(find artifacts -name '*.sha256' | wc -l)" -eq 7
           find artifacts -name '*.sha256' -print0 | while IFS= read -r -d '' checksum; do
+            sed -i 's/\r$//' "$checksum"
             (cd "$(dirname "$checksum")" && shasum -a 256 -c "$(basename "$checksum")")
           done
       - name: Publish tested packages
