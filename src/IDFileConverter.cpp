@@ -659,7 +659,7 @@ protected:
               ++count_catches;
             }
 
-            exp.addSpectrum(move(spec));
+            exp.addSpectrum(std::move(spec));
           }
         }
         if (count_catches > 0)

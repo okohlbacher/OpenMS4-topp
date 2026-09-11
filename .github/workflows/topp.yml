@@ -71,9 +71,9 @@ jobs:
             --dir "${{ runner.temp }}/core"
           cd "${{ runner.temp }}/core"
           if command -v shasum >/dev/null; then
-            shasum -a 256 -c *.sha256
+            tr -d '\r' < *.sha256 | shasum -a 256 -c -
           else
-            sha256sum -c *.sha256
+            tr -d '\r' < *.sha256 | sha256sum -c -
           fi
           tar -xzf *.tar.gz
       - name: Build, test, install, and package TOPP
