@@ -70,7 +70,11 @@ jobs:
             --pattern "OpenMS4-core-${{ matrix.platform }}-Release-94a2b114939e.tar.gz*" \
             --dir "${{ runner.temp }}/core"
           cd "${{ runner.temp }}/core"
-          shasum -a 256 -c *.sha256
+          if command -v shasum >/dev/null; then
+            shasum -a 256 -c *.sha256
+          else
+            sha256sum -c *.sha256
+          fi
           tar -xzf *.tar.gz
       - name: Build, test, install, and package TOPP
         run: >-

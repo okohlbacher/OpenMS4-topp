@@ -356,10 +356,9 @@ protected:
     PeakPickerIM picker;
     picker.setParameters(algo);
 
-    // Detect input file type
-    FileTypes::Type in_type = FileHandler::getType(input_file);
-
 #ifdef WITH_OPENTIMS
+    // Bruker input needs its native path when that optional reader is available.
+    FileTypes::Type in_type = FileHandler::getType(input_file);
     if (in_type == FileTypes::BRUKER_TDF)
     {
       if (process_opt == "lowmemory")
@@ -495,4 +494,3 @@ int main(int argc, const char** argv)
 }
 
 /// @endcond
-
