@@ -124,9 +124,9 @@ jobs:
           ssh-key: ${{ secrets.OPENMS4_CLI_DEPLOY_KEY }}
           persist-credentials: false
       - name: Install the pinned Core formula
-        run: >-
-          brew install --formula --build-from-source
-          https://raw.githubusercontent.com/okohlbacher/OpenMS4-core/codex/package-split/packaging/homebrew/Formula/openms4-core.rb
+        run: |
+          brew tap okohlbacher/openms4-core https://github.com/okohlbacher/OpenMS4-core
+          brew install --formula --build-from-source okohlbacher/openms4-core/openms4-core
       - name: Build and test the cask payload
         run: >-
           python3 tools/ci/run_homebrew.py --platform ${{ matrix.platform }}
