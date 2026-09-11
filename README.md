@@ -9,7 +9,7 @@ File-format support remains in the Core SDK. Numerical fixtures remain TestData.
 
 # OpenMSTOPP 1.0.0 experimental
 
-Independent source package: 130 command-line tools, plus FeatureLinkerWNet when enabled in the SDK. Requires the exact OpenMS core and OpenMSCLI commits in `dependencies.lock.json` installed in `CMAKE_PREFIX_PATH`. No parent source/build tree is used.
+Independent source package: 122 command-line tools, plus FeatureLinkerWNet when enabled in the SDK. Requires the exact OpenMS core and OpenMSCLI commits in `dependencies.lock.json` installed in `CMAKE_PREFIX_PATH`. No parent source/build tree is used.
 
 First build and install the pinned Core SDK with `OPENMS_BUILD_TEST_SUPPORT=ON`,
 then build and install the pinned OpenMSCLI package against that SDK. TOPP links
@@ -66,7 +66,18 @@ The private CLI source is checked out with a read-only deploy key stored as the
 that dependency.
 
 Two additional macOS jobs build the pinned Core Homebrew formula, CLI and TOPP
-with Homebrew dependencies. Their cask payloads contain the pinned Core runtime,
-CLI and all TOPP executables, while reusable source and SDK ownership stays in
-the separate repositories. Tags beginning with `topp-v` publish only artifacts
-from a successful branch CI run for the same commit.
+with Homebrew dependencies. The cask depends on the Core formula and contains
+CLI and all TOPP executables. Tags beginning with `topp-v` publish only
+artifacts from a successful branch CI run for the same commit.
+
+On macOS, install the tested tools and their Core formula dependency from the
+repository tap:
+
+```sh
+brew tap okohlbacher/openms4-topp https://github.com/okohlbacher/OpenMS4-topp
+brew install --cask okohlbacher/openms4-topp/openms4-topp
+```
+
+The OpenMS `FileInfo` executable is installed as `OpenMSFileInfo` to avoid a
+name collision with Leptonica's image utility on case-insensitive macOS file
+systems.
