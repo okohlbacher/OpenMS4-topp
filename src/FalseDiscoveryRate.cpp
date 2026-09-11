@@ -182,7 +182,7 @@ protected:
             Size c = 0;
             switcher.switchToGeneralScoreType(prot_ids, score_type, c);
           }
-          catch (Exception::MissingInformation& e)
+          catch (Exception::MissingInformation&)
           {
             IDScoreSwitcherAlgorithm switcher;
             auto params = switcher.getParameters();

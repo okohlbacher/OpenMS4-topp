@@ -17,7 +17,11 @@ foreach(tool IN LISTS package_tools)
   target_link_libraries(${tool} PRIVATE OpenMS::CLI OpenMS::Core)
   if(OPENMS4_WARNINGS_AS_ERRORS)
     if(MSVC)
-      target_compile_options(${tool} PRIVATE /W4 /WX)
+      # Match the warning set enforced by -Wall/-Wextra on GCC and Clang. MSVC's
+      # /W4 additionally reports legacy implicit conversions, shadowing, CRT
+      # portability notices, and C4505 from imported Core headers.
+      target_compile_options(${tool} PRIVATE /W4 /WX
+        /wd4244 /wd4245 /wd4267 /wd4456 /wd4458 /wd4505 /wd4996)
     else()
       target_compile_options(${tool} PRIVATE -Wall -Wextra -Wpedantic -Werror)
     endif()
