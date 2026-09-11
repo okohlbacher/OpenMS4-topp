@@ -3,6 +3,9 @@ name: TOPP
 on:
   push:
     branches: ['**']
+    paths-ignore:
+      - 'Casks/**'
+      - 'README.md'
   pull_request:
   workflow_dispatch:
 

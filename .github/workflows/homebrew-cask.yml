@@ -1,0 +1,38 @@
+name: Homebrew cask
+
+on:
+  push:
+    paths:
+      - 'Casks/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    name: ${{ matrix.platform }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-arm64
+            runner: macos-15
+          - platform: macos-x64
+            runner: macos-15-intel
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: '1'
+      HOMEBREW_NO_INSTALL_CLEANUP: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Install and run the released cask
+        run: |
+          brew tap okohlbacher/openms4-core https://github.com/okohlbacher/OpenMS4-core
+          brew tap okohlbacher/openms4-topp https://github.com/okohlbacher/OpenMS4-topp
+          brew install --cask okohlbacher/openms4-topp/openms4-topp
+          OpenMSInfo --help
+          brew uninstall --cask openms4-topp
