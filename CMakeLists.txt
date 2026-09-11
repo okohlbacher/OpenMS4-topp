@@ -24,6 +24,11 @@ foreach(tool IN LISTS package_tools)
         /wd4244 /wd4245 /wd4267 /wd4456 /wd4458 /wd4505 /wd4996)
     else()
       target_compile_options(${tool} PRIVATE -Wall -Wextra -Wpedantic -Werror)
+      if(APPLE AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+        # Boost.Iostreams in Intel Homebrew instantiates deprecated implicit
+        # copy constructors from its headers under current Apple Clang.
+        target_compile_options(${tool} PRIVATE -Wno-deprecated-copy)
+      endif()
     endif()
   endif()
 endforeach()
