@@ -53,3 +53,20 @@ TOPP always requires Core's optional `TestSupport` component to build FuzzyDiff,
 even when `BUILD_TESTING=OFF`. This does not make fixture files a dependency of
 every installed TOPP executable. `tools.json` owns executable registration and
 categories; FeatureLinkerWNet is enabled only with the SDK's WNet feature.
+
+## CI and packages
+
+GitHub Actions builds TOPP against the exact Core and CLI revisions in
+`dependencies.lock.json` on Linux x64/ARM64, macOS x64/ARM64 and Windows x64.
+The jobs test CLI, compile TOPP with warnings treated as errors, run every TOPP
+metadata test, install the tools, and start the installed `OpenMSInfo` binary.
+Each native archive contains only this TOPP product and its dependency lock.
+The private CLI source is checked out with a read-only deploy key stored as the
+`OPENMS4_CLI_DEPLOY_KEY` repository secret; jobs never receive write access to
+that dependency.
+
+Two additional macOS jobs build the pinned Core Homebrew formula, CLI and TOPP
+with Homebrew dependencies. Their cask payloads contain the pinned Core runtime,
+CLI and all TOPP executables, while reusable source and SDK ownership stays in
+the separate repositories. Tags beginning with `topp-v` publish only artifacts
+from a successful branch CI run for the same commit.
