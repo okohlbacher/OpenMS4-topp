@@ -74,11 +74,17 @@ On macOS, install the tested tools and their Core formula dependency from the
 repository tap:
 
 ```sh
-brew tap okohlbacher/openms4-core https://github.com/okohlbacher/OpenMS4-core
 brew trust --formula okohlbacher/openms4-core/openms4-core
+brew trust --cask okohlbacher/openms4-topp/openms4-topp
+brew tap okohlbacher/openms4-core https://github.com/okohlbacher/OpenMS4-core
 brew tap okohlbacher/openms4-topp https://github.com/okohlbacher/OpenMS4-topp
 brew install --cask okohlbacher/openms4-topp/openms4-topp
 ```
+
+Trust both packages before tapping: recent Homebrew refuses to read an untrusted
+tap, so a `brew tap` that precedes its trust step fails outright. Run
+`brew update` first if either tap was added before these files existed; a stale
+tap clone reports the cask as unavailable.
 
 The OpenMS `FileInfo` executable is installed as `OpenMSFileInfo` to avoid a
 name collision with Leptonica's image utility on case-insensitive macOS file

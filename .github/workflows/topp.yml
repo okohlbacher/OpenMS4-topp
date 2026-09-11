@@ -131,6 +131,7 @@ jobs:
           persist-credentials: false
       - name: Install the pinned Core formula
         run: |
+          brew trust --formula okohlbacher/openms4-core/openms4-core
           brew tap okohlbacher/openms4-core https://github.com/okohlbacher/OpenMS4-core
           brew install --formula --build-from-source okohlbacher/openms4-core/openms4-core
       - name: Build and test the cask payload
