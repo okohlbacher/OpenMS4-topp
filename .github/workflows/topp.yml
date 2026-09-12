@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           repository: okohlbacher/OpenMS4-cli
-          ref: fc30c523c3f3dfc79a6b7a6277e58bb23d81b197
+          ref: 8a9726da5e9db8ffc719e97660f4119146048be3
           path: dependencies/cli
           ssh-key: ${{ secrets.OPENMS4_CLI_DEPLOY_KEY }}
           persist-credentials: false
@@ -125,7 +125,7 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           repository: okohlbacher/OpenMS4-cli
-          ref: fc30c523c3f3dfc79a6b7a6277e58bb23d81b197
+          ref: 8a9726da5e9db8ffc719e97660f4119146048be3
           path: dependencies/cli
           ssh-key: ${{ secrets.OPENMS4_CLI_DEPLOY_KEY }}
           persist-credentials: false
