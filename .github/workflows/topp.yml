@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           repository: okohlbacher/OpenMS4-cli
-          ref: c19e49414bcd9ebdea42f89b3f74d2823205892c
+          ref: fc30c523c3f3dfc79a6b7a6277e58bb23d81b197
           path: dependencies/cli
           ssh-key: ${{ secrets.OPENMS4_CLI_DEPLOY_KEY }}
           persist-credentials: false
@@ -69,8 +69,8 @@ jobs:
         shell: bash
         run: |
           mkdir -p "${{ runner.temp }}/core"
-          gh release download core-v4.0.0-ci.1 --repo okohlbacher/OpenMS4-core \
-            --pattern "OpenMS4-core-${{ matrix.platform }}-Release-94a2b114939e.tar.gz*" \
+          gh release download core-v4.0.0-ci.2 --repo okohlbacher/OpenMS4-core \
+            --pattern "OpenMS4-core-${{ matrix.platform }}-Release-bc9cc12514c7.tar.gz*" \
             --dir "${{ runner.temp }}/core"
           cd "${{ runner.temp }}/core"
           if command -v shasum >/dev/null; then
@@ -125,7 +125,7 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           repository: okohlbacher/OpenMS4-cli
-          ref: c19e49414bcd9ebdea42f89b3f74d2823205892c
+          ref: fc30c523c3f3dfc79a6b7a6277e58bb23d81b197
           path: dependencies/cli
           ssh-key: ${{ secrets.OPENMS4_CLI_DEPLOY_KEY }}
           persist-credentials: false
