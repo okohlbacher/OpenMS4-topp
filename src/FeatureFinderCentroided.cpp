@@ -217,7 +217,7 @@ protected:
     {
       if (!getFlag_("force"))
       {
-        throw OpenMS::Exception::IllegalArgument(__FILE__, __LINE__, __FUNCTION__, "Error: Profile data provided but centroided spectra expected. To enforce processing of the data set the -force flag.");
+        throw OpenMS::Exception::IllegalArgument(__FILE__, __LINE__, __FUNCTION__, "the input contains profile spectra, but this tool expects centroided ones - run PeakPickerHiRes first, or pass -force to process the data as it is.");
       }
     }
 
