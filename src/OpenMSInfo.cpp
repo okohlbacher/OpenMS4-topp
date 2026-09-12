@@ -118,8 +118,8 @@ protected:
        << green("<< OpenMS Version >>\n")
        << "Version      : " << VersionInfo::getVersion() << '\n'
        << "Build time   : " << VersionInfo::getTime() << '\n'
-       << "Git sha1     : " << VersionInfo::getRevision() << '\n'
-       << "Git branch   : " << VersionInfo::getBranch() << '\n'
+       << "Core SDK     : " << VersionInfo::getSourceRevision() << (VersionInfo::isSourceDirty() ? " (dirty)" : "") << '\n'
+       << "TOPP package : " << OPENMS4_PACKAGE_REVISION << (OPENMS4_PACKAGE_DIRTY ? " (dirty)" : "") << '\n'
        << '\n'
        << green("<< Installation information >>\n")
        << "Data path    : " << File::getOpenMSDataPath()

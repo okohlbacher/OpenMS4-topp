@@ -33,6 +33,10 @@ foreach(tool IN LISTS package_tools)
   endif()
 endforeach()
 target_link_libraries(FuzzyDiff PRIVATE OpenMS::TestFramework)
+# OpenMSInfo reports which package build it belongs to, next to the Core SDK it links.
+openms4_source_revision(package_revision package_dirty)
+target_compile_definitions(OpenMSInfo PRIVATE
+  OPENMS4_PACKAGE_REVISION="${package_revision}" OPENMS4_PACKAGE_DIRTY=$<BOOL:${package_dirty}>)
 foreach(tool FileMerger DecoyDatabase)
   target_link_libraries(${tool} PRIVATE Boost::regex)
 endforeach()
