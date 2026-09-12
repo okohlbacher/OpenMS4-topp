@@ -1,9 +1,9 @@
 cask "openms4-topp" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.0-ci.2,f257c6d7d7a8"
-  sha256 arm:   "6fee2ced03153757e51b7c0ebe324efc5b7c7e03a4780be86573f3abac13396f",
-         intel: "7ad017c823846a909abc79b36ede68c3b849b0b7b87587341865233fe5f07907"
+  version "1.0.0-ci.4,c6e98a7782cc"
+  sha256 arm:   "2123570108a31ca068ec532dba805c49791744aa1bd42515b7a96e745f33d220",
+         intel: "36d6d8e83ff84608ab8d89f7b2ed8caf44d740a617fcbf46fcde7a06e7738b74"
 
   url "https://github.com/okohlbacher/OpenMS4-topp/releases/download/" \
       "topp-v#{version.csv.first}/OpenMS4-topp-macos-#{arch}-Homebrew-#{version.csv.second}.tar.gz"
