@@ -363,7 +363,8 @@ protected:
     {
       for (Feature& ft : features)
       {
-        ft.getConvexHull().expandToBoundingBox();
+        // Only the mass-trace hulls are stored; the overall hull is a cache Core rebuilds from
+        // them (and hands out read-only), so expanding it here never reached the output.
         for (Size i = 0; i < ft.getConvexHulls().size(); ++i)
         {
           ft.getConvexHulls()[i].expandToBoundingBox();
