@@ -42,6 +42,9 @@ def main() -> None:
     parser.add_argument("--work-dir", required=True, type=Path)
     parser.add_argument("--jobs", type=int, default=2)
     args = parser.parse_args()
+    # Parallel launches of freshly built binaries stall ~25 s on the Mac Studio runner (in
+    # syspolicyd); serial launches do not, so its workflow asks for serial tests. Builds stay parallel.
+    test_jobs = "1" if os.environ.get("OPENMS4_SERIAL_TESTS") == "1" else str(args.jobs)
     source = Path(__file__).resolve().parents[2]
     work = args.work_dir.resolve()
     if args.jobs < 1 or (work.exists() and any(work.iterdir())):
@@ -102,7 +105,7 @@ def main() -> None:
     run("build-cli", ["cmake", "--build", str(cli_build), "--config", configuration,
                        "--parallel", str(args.jobs)])
     run("test-cli", ["ctest", "--test-dir", str(cli_build), "-C", configuration,
-                      "--output-on-failure", "--no-tests=error", "--parallel", str(args.jobs)])
+                      "--output-on-failure", "--no-tests=error", "--parallel", test_jobs])
     run("install-cli", ["cmake", "--install", str(cli_build), "--config", configuration])
     topp_prefixes = f"{core.as_posix()};{cli_install.as_posix()};{dependency_prefix.as_posix()}"
     run("configure-topp", ["cmake", "-S", str(source), "-B", str(topp_build),
@@ -112,7 +115,7 @@ def main() -> None:
     run("build-topp", ["cmake", "--build", str(topp_build), "--config", configuration,
                         "--parallel", str(args.jobs)])
     run("test-topp", ["ctest", "--test-dir", str(topp_build), "-C", configuration,
-                       "--output-on-failure", "--no-tests=error", "--parallel", str(args.jobs)])
+                       "--output-on-failure", "--no-tests=error", "--parallel", test_jobs])
     run("install-topp", ["cmake", "--install", str(topp_build), "--config", configuration])
     installed_tools = sorted((topp_install / "bin").glob("*.exe" if windows else "*"))
     if len(installed_tools) < 120:
