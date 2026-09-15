@@ -1,9 +1,9 @@
 cask "openms4-topp" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.0-ci.4,c6e98a7782cc"
-  sha256 arm:   "2123570108a31ca068ec532dba805c49791744aa1bd42515b7a96e745f33d220",
-         intel: "36d6d8e83ff84608ab8d89f7b2ed8caf44d740a617fcbf46fcde7a06e7738b74"
+  version "1.0.0-ci.5,0206f6e17541"
+  sha256 arm:   "6a44a1e6223cd70266123e3852ca4c1b20eb1c66134ce26c59aaa8ee6448d0b2",
+         intel: "88866687d2509096d22157dc660da0e48c242c96fa09f8e20f2ad196b16c78a4"
 
   url "https://github.com/okohlbacher/OpenMS4-topp/releases/download/" \
       "topp-v#{version.csv.first}/OpenMS4-topp-macos-#{arch}-Homebrew-#{version.csv.second}.tar.gz"
@@ -11,42 +11,143 @@ cask "openms4-topp" do
   desc "Command-line mass-spectrometry tools built against the OpenMS Core SDK"
   homepage "https://github.com/okohlbacher/OpenMS4-topp"
 
-  disable! date:    "2026-09-14",
-           because: "was built against openms4-core 4.0.0-ci.2, and the tap now serves a binary-incompatible newer Core"
-
   depends_on formula: "okohlbacher/openms4-core/openms4-core"
   depends_on macos: :sequoia
 
   payload = "OpenMS4-topp-macos-#{arch}-Homebrew-#{version.csv.second}"
-  %w[
-    AccurateMassSearch AssayGeneratorMetabo AssayGeneratorMetaboSirius BaselineFilter CVInspector ClusterMassTraces
-    ClusterMassTracesByPrecursor ConsensusID ConsensusMapNormalizer DTAExtractor DatabaseFilter DeMeanderize
-    Decharger DecoyDatabase Digestor DigestorMotif EICExtractor Epifany
-    ExternalCalibration FalseDiscoveryRate FeatureFinderCentroided FeatureFinderIdentification FeatureFinderLFQ
-    FeatureFinderMetabo FeatureFinderMetaboIdent FeatureFinderMultiplex FeatureLinkerLabeled FeatureLinkerUnlabeled
-    FeatureLinkerUnlabeledKD FeatureLinkerUnlabeledQT
-    FileConverter FileFilter FileMerger FuzzyDiff GNPSExport
-    HighResPrecursorMassCorrector IDConflictResolver IDDecoyProbability IDExtractor IDFileConverter IDFilter
-    IDMapper IDMerger IDPosteriorErrorProbability IDRTCalibration IDRipper IDScoreSwitcher
-    IDSplitter INIUpdater InternalCalibration IonMobilityBinning IsobaricAnalyzer IsobaricWorkflow
-    JSONExporter LuciphorAdapter MRMMapper MRMPairFinder MSFraggerAdapter MSGFPlusAdapter
-    MSstatsConverter MaRaClusterAdapter MapAlignerIdentification MapAlignerPoseClustering MapAlignerTreeGuided
-    MapNormalizer
-    MapRTTransformer MapStatistics MassCalculator MassTraceExtractor MetaProSIP MetaboliteAdductDecharger
-    MetaboliteSpectralMatcher MultiplexResolver MzMLSplitter MzTabExporter NoiseFilterGaussian NoiseFilterSGolay
-    NovorAdapter OpenMSDatabasesInfo OpenMSInfo OpenPepXL PSMFeatureExtractor ParquetConverter
-    PeakPickerHiRes PeakPickerIM PeakPickerIterative PeptideIndexer PercolatorAdapter PhosphoScoring
-    ProteinInference ProteinQuantifier QCCalculator QCEmbedder QCExporter QCExtractor
-    QCImporter QCMerger QCShrinker QualityControl RNADigestor RNAMassCalculator
-    RNPxlXICFilter Resampler SageAdapter SeedListGenerator SemanticValidator SequenceCoverageCalculator
-    SimpleSearchEngine SiriusExport SpectraFilterNLargest SpectraFilterNormalizer SpectraFilterThresholdMower
-    SpectraFilterWindowMower
-    SpectraMerger SpectraSTSearchAdapter StaticModification TICCalculator TextExporter UniPEFF
-    XFDR XMLValidator
-  ].each do |tool|
-    binary "#{payload}/bin/#{tool}"
-  end
+  binary "#{payload}/bin/AccurateMassSearch"
+  binary "#{payload}/bin/AssayGeneratorMetabo"
+  binary "#{payload}/bin/AssayGeneratorMetaboSirius"
+  binary "#{payload}/bin/BaselineFilter"
+  binary "#{payload}/bin/CVInspector"
+  binary "#{payload}/bin/ClusterMassTraces"
+  binary "#{payload}/bin/ClusterMassTracesByPrecursor"
+  binary "#{payload}/bin/ConsensusID"
+  binary "#{payload}/bin/ConsensusMapNormalizer"
+  binary "#{payload}/bin/DTAExtractor"
+  binary "#{payload}/bin/DatabaseFilter"
+  binary "#{payload}/bin/DeMeanderize"
+  binary "#{payload}/bin/Decharger"
+  binary "#{payload}/bin/DecoyDatabase"
+  binary "#{payload}/bin/Digestor"
+  binary "#{payload}/bin/DigestorMotif"
+  binary "#{payload}/bin/EICExtractor"
+  binary "#{payload}/bin/Epifany"
+  binary "#{payload}/bin/ExternalCalibration"
+  binary "#{payload}/bin/FalseDiscoveryRate"
+  binary "#{payload}/bin/FeatureFinderCentroided"
+  binary "#{payload}/bin/FeatureFinderIdentification"
+  binary "#{payload}/bin/FeatureFinderLFQ"
+  binary "#{payload}/bin/FeatureFinderMetabo"
+  binary "#{payload}/bin/FeatureFinderMetaboIdent"
+  binary "#{payload}/bin/FeatureFinderMultiplex"
+  binary "#{payload}/bin/FeatureLinkerLabeled"
+  binary "#{payload}/bin/FeatureLinkerUnlabeled"
+  binary "#{payload}/bin/FeatureLinkerUnlabeledKD"
+  binary "#{payload}/bin/FeatureLinkerUnlabeledQT"
+  binary "#{payload}/bin/FileConverter"
+  binary "#{payload}/bin/FileFilter"
   binary "#{payload}/bin/FileInfo", target: "OpenMSFileInfo"
+  binary "#{payload}/bin/FileMerger"
+  binary "#{payload}/bin/FuzzyDiff"
+  binary "#{payload}/bin/GNPSExport"
+  binary "#{payload}/bin/HighResPrecursorMassCorrector"
+  binary "#{payload}/bin/IDConflictResolver"
+  binary "#{payload}/bin/IDDecoyProbability"
+  binary "#{payload}/bin/IDExtractor"
+  binary "#{payload}/bin/IDFileConverter"
+  binary "#{payload}/bin/IDFilter"
+  binary "#{payload}/bin/IDMapper"
+  binary "#{payload}/bin/IDMerger"
+  binary "#{payload}/bin/IDPosteriorErrorProbability"
+  binary "#{payload}/bin/IDRTCalibration"
+  binary "#{payload}/bin/IDRipper"
+  binary "#{payload}/bin/IDScoreSwitcher"
+  binary "#{payload}/bin/IDSplitter"
+  binary "#{payload}/bin/INIUpdater"
+  binary "#{payload}/bin/InternalCalibration"
+  binary "#{payload}/bin/IonMobilityBinning"
+  binary "#{payload}/bin/IsobaricAnalyzer"
+  binary "#{payload}/bin/IsobaricWorkflow"
+  binary "#{payload}/bin/JSONExporter"
+  binary "#{payload}/bin/LuciphorAdapter"
+  binary "#{payload}/bin/MRMMapper"
+  binary "#{payload}/bin/MRMPairFinder"
+  binary "#{payload}/bin/MSFraggerAdapter"
+  binary "#{payload}/bin/MSGFPlusAdapter"
+  binary "#{payload}/bin/MSstatsConverter"
+  binary "#{payload}/bin/MaRaClusterAdapter"
+  binary "#{payload}/bin/MapAlignerIdentification"
+  binary "#{payload}/bin/MapAlignerPoseClustering"
+  binary "#{payload}/bin/MapAlignerTreeGuided"
+  binary "#{payload}/bin/MapNormalizer"
+  binary "#{payload}/bin/MapRTTransformer"
+  binary "#{payload}/bin/MapStatistics"
+  binary "#{payload}/bin/MassCalculator"
+  binary "#{payload}/bin/MassTraceExtractor"
+  binary "#{payload}/bin/MetaProSIP"
+  binary "#{payload}/bin/MetaboliteAdductDecharger"
+  binary "#{payload}/bin/MetaboliteSpectralMatcher"
+  binary "#{payload}/bin/MultiplexResolver"
+  binary "#{payload}/bin/MzMLSplitter"
+  binary "#{payload}/bin/MzTabExporter"
+  binary "#{payload}/bin/NoiseFilterGaussian"
+  binary "#{payload}/bin/NoiseFilterSGolay"
+  binary "#{payload}/bin/NovorAdapter"
+  binary "#{payload}/bin/OpenMSDatabasesInfo"
+  binary "#{payload}/bin/OpenMSInfo"
+  binary "#{payload}/bin/OpenPepXL"
+  binary "#{payload}/bin/PSMFeatureExtractor"
+  binary "#{payload}/bin/ParquetConverter"
+  binary "#{payload}/bin/PeakPickerHiRes"
+  binary "#{payload}/bin/PeakPickerIM"
+  binary "#{payload}/bin/PeakPickerIterative"
+  binary "#{payload}/bin/PeptideIndexer"
+  binary "#{payload}/bin/PercolatorAdapter"
+  binary "#{payload}/bin/PhosphoScoring"
+  binary "#{payload}/bin/ProteinInference"
+  binary "#{payload}/bin/ProteinQuantifier"
+  binary "#{payload}/bin/QCCalculator"
+  binary "#{payload}/bin/QCEmbedder"
+  binary "#{payload}/bin/QCExporter"
+  binary "#{payload}/bin/QCExtractor"
+  binary "#{payload}/bin/QCImporter"
+  binary "#{payload}/bin/QCMerger"
+  binary "#{payload}/bin/QCShrinker"
+  binary "#{payload}/bin/QualityControl"
+  binary "#{payload}/bin/RNADigestor"
+  binary "#{payload}/bin/RNAMassCalculator"
+  binary "#{payload}/bin/RNPxlXICFilter"
+  binary "#{payload}/bin/Resampler"
+  binary "#{payload}/bin/SageAdapter"
+  binary "#{payload}/bin/SeedListGenerator"
+  binary "#{payload}/bin/SemanticValidator"
+  binary "#{payload}/bin/SequenceCoverageCalculator"
+  binary "#{payload}/bin/SimpleSearchEngine"
+  binary "#{payload}/bin/SiriusExport"
+  binary "#{payload}/bin/SpectraFilterNLargest"
+  binary "#{payload}/bin/SpectraFilterNormalizer"
+  binary "#{payload}/bin/SpectraFilterThresholdMower"
+  binary "#{payload}/bin/SpectraFilterWindowMower"
+  binary "#{payload}/bin/SpectraMerger"
+  binary "#{payload}/bin/SpectraSTSearchAdapter"
+  binary "#{payload}/bin/StaticModification"
+  binary "#{payload}/bin/TICCalculator"
+  binary "#{payload}/bin/TextExporter"
+  binary "#{payload}/bin/UniPEFF"
+  binary "#{payload}/bin/XFDR"
+  binary "#{payload}/bin/XMLValidator"
+
+  # libOpenMS has no versioned name, so a payload only runs with the Core it was built against.
+  preflight do
+    config = "#{HOMEBREW_PREFIX}/opt/openms4-core/lib/cmake/OpenMS/OpenMSConfig.cmake"
+    core = File.exist?(config) ? File.read(config)[/set\(OpenMS_SOURCE_REVISION "([0-9a-f]{40})"\)/, 1] : nil
+    next if core == "ac41cc177023e24a8fbc711a6ce9010187c54c44"
+
+    raise Cask::CaskError, "openms4-topp #{version.csv.first} was built against openms4-core ac41cc177023, " \
+                           "but the installed openms4-core is #{core&.slice(0, 12) || "unknown"}. " \
+                           "Install the openms4-topp release built for the installed Core."
+  end
 
   postflight_steps do
     run "/usr/bin/xattr",
