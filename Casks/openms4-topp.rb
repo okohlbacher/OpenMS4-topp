@@ -1,9 +1,9 @@
 cask "openms4-topp" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.0-ci.7,c1d2cd45a621"
-  sha256 arm:   "0d01a6e10d098fbc98bdb68f770e83be39990f8410a931a68df53a25814affb5",
-         intel: "0d8b6ea7adeb5cacf9272e57e180d67fc358b7b05fbf133007b6da8ddb1d95db"
+  version "1.0.0-ci.8,9f69baae3295"
+  sha256 arm:   "2b497a921e2b08f27cc6a77396721f2cca0de791acd4f2e80b5d366db80a52b6",
+         intel: "cba5288bbaf97fb63b0ff4752c8042978c2cb248cca072a575259c23d8a1029b"
 
   url "https://github.com/okohlbacher/OpenMS4-topp/releases/download/" \
       "topp-v#{version.csv.first}/OpenMS4-topp-macos-#{arch}-Homebrew-#{version.csv.second}.tar.gz"
@@ -142,9 +142,9 @@ cask "openms4-topp" do
   preflight do
     config = "#{HOMEBREW_PREFIX}/opt/openms4-core/lib/cmake/OpenMS/OpenMSConfig.cmake"
     core = File.exist?(config) ? File.read(config)[/set\(OpenMS_SOURCE_REVISION "([0-9a-f]{40})"\)/, 1] : nil
-    next if core == "eb58e981d7e0864634b59230874a56a1512369f7"
+    next if core == "7d90cec8718d28518527acc10b495550f106de26"
 
-    raise Cask::CaskError, "openms4-topp #{version.csv.first} was built against openms4-core eb58e981d7e0, " \
+    raise Cask::CaskError, "openms4-topp #{version.csv.first} was built against openms4-core 7d90cec8718d, " \
                            "but the installed openms4-core is #{core&.slice(0, 12) || "unknown"}. " \
                            "Install the openms4-topp release built for the installed Core."
   end
