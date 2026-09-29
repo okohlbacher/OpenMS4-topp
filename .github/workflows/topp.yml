@@ -15,8 +15,9 @@ permissions:
 jobs:
   native:
     name: ${{ matrix.platform }} / Release
-    # Pushes and dispatches build Linux x64 on the dax runner and macOS arm64 on the
-    # Mac Studio; pull requests from forks must never run there, so they stay hosted.
+    # Pushes and dispatches build on the self-hosted pool named for their platform; an
+    # empty pool means the hosted runner. The integration parent's repin sets these pools.
+    # Pull requests from forks must never run on our machines, so they always stay hosted.
     runs-on: ${{ (github.event_name != 'pull_request' && matrix.platform == 'linux-x64' && 'dax-linux-x64') || (github.event_name != 'pull_request' && matrix.platform == 'macos-arm64' && 'studio-macos-arm64') || matrix.runner }}
     timeout-minutes: 180
     strategy:
