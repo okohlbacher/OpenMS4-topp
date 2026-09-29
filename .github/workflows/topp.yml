@@ -18,7 +18,7 @@ jobs:
     # Pushes and dispatches build on the self-hosted pool named for their platform; an
     # empty pool means the hosted runner. The integration parent's repin sets these pools.
     # Pull requests from forks must never run on our machines, so they always stay hosted.
-    runs-on: ${{ (github.event_name != 'pull_request' && matrix.platform == 'linux-x64' && 'dax-linux-x64') || (github.event_name != 'pull_request' && matrix.platform == 'macos-arm64' && 'studio-macos-arm64') || matrix.runner }}
+    runs-on: ${{ (github.event_name != 'pull_request' && matrix.platform == 'linux-x64' && 'dax-linux-x64') || (github.event_name != 'pull_request' && matrix.platform == 'macos-arm64' && '') || matrix.runner }}
     timeout-minutes: 180
     strategy:
       fail-fast: false
@@ -55,7 +55,7 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           repository: okohlbacher/OpenMS4-cli
-          ref: be670fbbbdb2a3078ded440b9b8759fd1c782656
+          ref: 475065671c1764700c0348037858d07e1934b110
           path: dependencies/cli
           ssh-key: ${{ secrets.OPENMS4_CLI_DEPLOY_KEY }}
           persist-credentials: false
@@ -134,7 +134,7 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           repository: okohlbacher/OpenMS4-cli
-          ref: be670fbbbdb2a3078ded440b9b8759fd1c782656
+          ref: 475065671c1764700c0348037858d07e1934b110
           path: dependencies/cli
           ssh-key: ${{ secrets.OPENMS4_CLI_DEPLOY_KEY }}
           persist-credentials: false
